@@ -1,0 +1,304 @@
+body{
+	font-size: 12px;
+    font-family: Arial;
+	background-color: #ccc;
+}
+
+.wrapper{
+	background-color: #fff;
+    max-width: 1024px;
+    margin: 0px auto;
+    padding: 10px;
+    box-shadow: 0 0 3px #333;
+}
+
+.layout-section{
+	width: 80%;
+    margin: 0px auto;
+}
+
+.header-wrapper{
+	text-align: center;
+}
+
+.cardinfo-section {
+    background-color: #cccccc;
+    padding: 15px 10px;
+    height: 40px;
+}
+.card-info{
+	width: 80%;
+	float: left;
+}
+.elig-section{
+	width: 20%;
+	float: right;
+	margin-top: 15px;
+	color: green;
+    text-align: right;
+}
+
+.img-section{
+	float: left;
+	width: 80px;
+}
+.img-section img{
+	width: 61px;
+    height: 39px;
+}
+.card-section{
+	margin-top: 5px;
+}
+
+.holder-name {
+   color: #006890;
+   font-size: 15px;
+   font-weight: 300;
+}
+.enroll-section{
+	margin-bottom: 20px;
+}
+.entoll-heading{
+	text-align: center;
+}
+
+.boder-section{
+	border: 2px solid #CCC;
+}
+
+.agreement-section{
+	margin: 30px auto;
+	width: 80%;
+}
+.reviewed-checkbox{
+	padding: 20px 0px;
+	
+}
+.expand-collaps{
+    color: #006890;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.expand-collaps span{
+	margin-left: 15px;
+	text-decoration: underline;
+}
+
+.heading-content{
+	width: 100%;
+	margin: 10px 0px;
+	clear: both;
+}
+.heading-content .left-txt{
+	width: 70%;
+	float: left;
+	font-weight: 700;
+}
+
+.heading-content .right-txt{
+	float: right;
+    width: 20%;
+}
+.right-txt span{
+	margin-left: 20px;
+	color: #006890;
+    font-size: 15px;
+    font-weight: 300;
+}
+.content-section{
+	display: none;
+}
+.content-section .content{
+	padding: 10px 0 0 12px;
+    background-color: #e5e5e5;
+    height: 150px;
+    overflow: auto;
+    clear: both;
+}
+.enroll-btn{
+	text-align: center;
+    padding: 10px;
+}
+.btn{
+	width : 25px;
+}
+.consent{
+	color: #006890;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.errormsg{
+	/* height: 500px; */
+	padding: 150px;
+	text-align: center;
+}
+.errormsg div{
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	background: url(../images/error.png);
+	background-size: 100px 100px;
+    background-repeat: no-repeat;
+}
+#enrollBtn{
+	background-color: #0c306c;
+    width: 150px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid #0c306c;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+#enrollBtn:disabled {
+    background-color: #CCC;
+    color: #6c6c6c;
+    cursor:default;
+    border: 1px solid #CCC;
+}
+@media print {
+    /* Hide everything in the body when printing... */
+    body.printing #app-oneclick{ display: none; }
+    /* ...except our special div. */
+    body.printing #print-me{ display: block; }
+}
+
+@media screen {
+    /* Hide the special layer from the screen. */
+    #print-me { display: none; }
+}
+
+@media only screen and (max-width : 650px) {
+	.layout-section{
+		width : 100% !important;
+	}
+	.heading-content .right-txt {
+		width: auto;
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	.cardinfo-section {
+		height: auto;
+	}
+	.card-info{
+		width: 100%;
+    	float: none;
+	}
+	.elig-section {
+	    width: 100%;
+    	float: none;
+	   	margin-top: 15px;
+	    color: green;
+	    text-align: right;
+	}
+}/* 
+@media only screen and (max-width : 360px) {
+	.entoll-heading{
+		font-size: 20px; 
+	}
+	.agreement-section{
+		width: 100%;
+	}
+} */
+@media only screen and (max-width : 360px) {
+	.entoll-heading{
+		font-size: 20px; 
+	}
+	.agreement-section{
+		width: 100%;
+	}
+	.img-section{
+		float: none;
+		width: 100%;
+	}
+	.img-section img{
+		width: 100%;
+		height: auto;
+	}
+	.popup-inner{
+		width: 70% !important;
+	}
+}
+
+
+/* ---------------- */
+
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+}
+ 
+/* Inner */
+.popup-inner {
+    max-width:700px;
+    width:80%;
+    padding:20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}
+ 
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+.popup .popup-content{
+	padding-bottom: 10px;
+    min-height: 200px;
+    background-color: #CCC;
+    padding: 5px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+.popup .btn-section button{
+	float: right;
+	padding: 0px 20px;
+	margin-left: 10px;
+	background-color: #0c306c;
+   /*  width: 150px; */
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid #0c306c;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}

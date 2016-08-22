@@ -1,0 +1,19 @@
+<div class="cardinfo-section">
+	<div class="card-info">
+	{#cardDetails}	
+		<div class="img-section">	
+			<img src='{cardIcon}'>
+		</div>
+		<div class="card-section">
+			<div >	
+				<span>{type}</span>
+				<span>(Ending-{endNumber})</span>
+			</div>
+			<div class="holder-name">{holderName}</div>
+		</div>
+	{/cardDetails}
+	</div>
+	<div class="elig-section">
+		<span>Eligible</span>
+	</div>
+</div>
