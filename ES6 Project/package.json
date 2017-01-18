@@ -1,0 +1,19 @@
+{
+  "name": "adressbookines6",
+  "version": "1.0.0",
+  "description": "display address",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vinayui",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "*",
+    "babel-core":"*",
+    "babel-preset-es2015":"*",
+    "gulp-babel":"*"
+  }
+
+
+}
